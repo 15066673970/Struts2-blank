@@ -13,6 +13,8 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<!-- 注释掉servlet -->
+	<!-- 
 	<servlet>
 		<servlet-name>loginServlet</servlet-name>
 		<servlet-class>com.jinan.www.servlet.LoginServlet</servlet-class>
@@ -21,4 +23,19 @@
 		<servlet-name>loginServlet</servlet-name>
 		<url-pattern>/loginServlet</url-pattern>
 	</servlet-mapping>
+	 -->
+	
+	<!-- struts2基本配置 -->
+	<filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- end -->
+	
+	
 </web-app>

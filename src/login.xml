@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="login" namespace="/login" extends="default">
+
+        <action name="LoginAction" class="com.jinan.www.actions.LoginAction2">
+            <result name="success">/WEB-INF/jsp/index.jsp</result>
+            <result name="error">/WEB-INF/jsp/error.jsp</result>
+        </action>
+        <action name="LoginActionMethod1" class="com.jinan.www.actions.TestParameterPassingMethod1">
+        	<result name="success">/WEB-INF/jsp/index.jsp</result>
+        	<result name="error">/WEB-INF/jsp/error.jsp</result>
+        </action>
+<!-- 
+        <action name="Login_*" method="{1}" class="example.Login">
+            <result name="input">/WEB-INF/jsp/example/Login.jsp</result>
+            <result type="redirectAction">Menu</result>
+        </action>
+
+        <action name="*" class="example.ExampleSupport">
+            <result>/WEB-INF/jsp/example/{1}.jsp</result>
+        </action>
+ -->
+        <!-- Add actions here -->
+    </package>
+</struts>
